@@ -1,6 +1,6 @@
-# Management and analysis of sequencing data
+# Managing the analysis of high-throughput sequencing data
 
-Didactic dataset associated to the manuscript entitled "Managing analysis of high-throughput sequencing data". The manuscript, cover letter, tables, figures (and more) can be found [here](https://drive.google.com/drive/folders/0B-MXr-KyKmm6VndUOXBqaGY5Vkk?usp=sharing).
+Didactic dataset associated to the manuscript entitled "Managing the analysis of high-throughput sequencing data". The manuscript, cover letter, tables, figures (and more) can be found [here](https://drive.google.com/drive/folders/0B-MXr-KyKmm6VndUOXBqaGY5Vkk?usp=sharing).
 
 
 
@@ -20,20 +20,36 @@ Didactic dataset associated to the manuscript entitled "Managing analysis of hig
 
 ## Installation and usage
 
-...
+Download the entire repository with:
+```
+git clone https://github.com/4DGenome/conseq.git
+```
 
+In many of the scripts in `scripts` paths are relative to the `$CONSEQ` Unix variable defined at the beginning of the script, which is set to `/users/GR/mb/jquilez/projects/conseq` (the absolute path to the repository directory in the machine where it was developed). For instance:
+```
+head -n 12 scripts/utils/check_sequencing_index_concordance.sh
+```
+
+The scripts are written so that they can be executed from the directory where the repository is cloned by conveniently changing the `$CONSEQ` value, which can be achieved for all scripts with:
+```
+TARGET_DIR=my_home_directory
+for s in scripts/*/*.sh; do
+	IDIR='\/users\/GR\/mb\/jquilez\/projects\/conseq'
+	sed -i "s/$IDIR/$TARGET_DIR/g" $s
+done
+```
 
 
 <br>
 
-## Toy sequencing dataset
+## Didactic dataset
 
-It includes 7 HTS samples (2 RNA-seq, 1 ChIP-seq and 4 Hi-C samples).
+The Didactic dataset includes 7 high-throughput sequencing (HTS) samples (2 RNA-seq, 1 ChIP-seq and 4 Hi-C samples).
 
 ### HTS data
 
 The `data` folder contains:
-- FASTQ files with 1,000 and 2,000 reads for single and paired end samples, respectively, organised by HTS application and sequencing run date (`data/<data_type>/raw/<sequencing_run_date>`)
+- FASTQ files with 1,000 and 2x1,000 reads for single and paired end samples, respectively, organised by HTS application and sequencing run date (`data/<data_type>/raw/<sequencing_run_date>`)
 - data processed with core analysis pipelines (e.g. RNA-seq pipeline) (`data/<data_type>/samples`)
 
 ### Metadata
@@ -212,19 +228,7 @@ The command above shows the analysis performed for this paper, which is assigned
 - FastQC
 - unzip
 
-In many of the scripts in `scripts` paths are relative to the `$CONSEQ` Unix variable defined at the beginning of the script, which is set to `/users/GR/mb/jquilez/projects/conseq` (the absolute path to the repository directory in the machine where it was developed). For instance:
-```
-head -n 12 scripts/utils/check_sequencing_index_concordance.sh
-```
 
-The scripts are written so that they can be executed from the directory where the repository is cloned by conveniently changing the `$CONSEQ` value, which can be achieved for all scripts with:
-```
-TARGET_DIR=my_home_directory
-for s in scripts/*/*.sh; do
-	IDIR='\/users\/GR\/mb\/jquilez\/projects\/conseq'
-	sed -i "s/$IDIR/$TARGET_DIR/g" $s
-done
-```
 
 ## To do
 - [ ] update to zenodo:
