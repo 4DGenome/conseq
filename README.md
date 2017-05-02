@@ -13,7 +13,7 @@ Didactic dataset associated to the manuscript entitled "Managing the analysis of
 - [Metadata collection](#metadata-collection)
 - [Sample identifier (ID) scheme](#sample-identifier-(ID)-scheme)
 - [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation)
-- [Scalability, parallelization and automatic configuration](#scalability,-parallelization-and-automatic-configuration)
+- [Scalability, parallelization and automatic configuration](#scalability-parallelization-and-automatic-configuration)
 - [Dependencies](#dependencies)
 
 
