@@ -8,7 +8,7 @@ Didactic dataset associated to the manuscript entitled "Managing the analysis of
 
 ## Table of Contents
 - [Installation and usage](#installation-and-usage)
-- [Toy sequencing dataset](#toy-sequencing-dataset)
+- [Didactic dataset](#didactic-dataset)
 - [Sequencing index concordance](#sequencing-index-concordance)
 - [Metadata collection](#metadata-collection)
 - [Sample identifier (ID) scheme](#sample-identifier-(ID)-scheme)
@@ -52,7 +52,7 @@ The `data` folder contains:
 - FASTQ files with 1,000 and 2x1,000 reads for single and paired end samples, respectively, organised by HTS application and sequencing run date (`data/<data_type>/raw/<sequencing_run_date>`)
 - data processed with core analysis pipelines (e.g. RNA-seq pipeline) (`data/<data_type>/samples`)
 
-For information on how data are structured see below [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation).
+For information on how data are structured see [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation).
 
 ### Metadata
 
@@ -69,9 +69,9 @@ The `metadata` directory contains the metadata for the 7 HTS samples in several 
 ```bash
 scripts/utils/check_sequencing_index_concordance.sh gv_066_01_01_chipseq
 ```
-Executing the code above checks, for the sample passed as argument (gv_066_01_01_chipseq in this case), whether the sequencing indexes found in the metadata and in the FASTQ agree. Note that for this to work:
-1. it relies on an specific organisation of the data (see below)
-2. the sequencing index used in this sample needs to be part of the collected metadata (see below)
+Executing the code above checks, for the sample passed as argument (`gv_066_01_01_chipseq in this case), whether the sequencing indexes found in the metadata and in the FASTQ agree. Note that for this sanity check to work:
+1. a specific organisation of the data is required (see [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation))
+2. the sequencing index used in this sample needs to be part of the collected metadata (see [Metadata collection](#metadata-collection))
 3. the sequencing index used in this sample needs to be part of the FASTQ header rows (which is not always provided); for instance:
 ```bash
 zcat data/chipseq/raw/2012-11-29/gv_066_01_01_chipseq_read1.fastq.gz |head -n 4
@@ -99,7 +99,7 @@ We provide scripts to download the collected metadata and dump them into a SQL d
 ```
 scripts/utils/io_metadata.sh -m download_input_metadata
 ```
-The `-m` command selects the mode. When `download_input_metadata` is passed, the metadata is downloaded from the corresponding URL and added to the 'input_metadata' table of the metatadata SQL database.
+The `-m` command selects the mode. When `download_input_metadata` is passed, the metadata is downloaded from the corresponding URL and added to the `input_metadata` table of the metatadata SQL database.
 
 
 ### Extract metadata
@@ -107,7 +107,7 @@ The `-m` command selects the mode. When `download_input_metadata` is passed, the
 ```
 scripts/utils/io_metadata.sh -m get_from_metadata -s gv_066_01_01_chipseq -t input_metadata -a SAMPLE_NAME
 ```
-In addition to `-m get_from_metadata`, to extract a specific metadata value it is required to specify:
+In addition to `-m get_from_metadata`, the following variables are required to extract a specific metadata value:
 - sample (`-s`)
 - table in the metadata database (`-t`)
 - attribute (`-a`) that is printed out
@@ -118,14 +118,14 @@ In addition to `-m get_from_metadata`, to extract a specific metadata value it i
 ```
 scripts/utils/io_metadata.sh -m add_to_metadata -s gv_066_01_01_chipseq -t input_metadata -a SAMPLE_NAME
 ```
-Similarly, `-m add_to_metadata`, updates a specific metadata value.
+Similarly, `-m add_to_metadata` updates a specific metadata value.
 
 ### Print freeze
 
 ```
 scripts/utils/io_metadata.sh -m print_freeze
 ```
-Prints the content of the SQL metadata database (one `*.csv` file per table) into:
+Prints the content of the SQL metadata database (one `*.csv` file per table) into a dated directory:
 ```
 ls -l metadata/freezes/
 ```
@@ -190,7 +190,7 @@ We suggest a structured and hierarchical organisation that reflects the way in w
 ```
 tree data/*/raw
 ```
-As it can be seen from the command above, we the raw data from the sequencing samples (`*fastq.gz` files) grouped by the run in which they were generated. Sequencing run directories contain not only the FASTQ files but also [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) reports informing about the quality of the raw reads.
+As it can be seen from the output of the command above, FASTQ files (`*fastq.gz`) with the raw sequencing reads are named with the SAMPLE_ID and grouped by the run in which they were generated. Sequencing run directories contain not only the FASTQ files but also [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) reports informing about the quality of the raw reads.
 
 ### Processed data
 
