@@ -25,7 +25,7 @@ Download the entire repository with:
 git clone https://github.com/4DGenome/conseq.git
 ```
 
-In many of the scripts in `scripts` paths are relative to the `$CONSEQ` Unix variable defined at the beginning of the script, which is set to `/users/GR/mb/jquilez/projects/conseq` (the absolute path to the repository directory in the machine where it was developed). For instance:
+In many of the scripts in `scripts` paths are relative to the `$CONSEQ` Unix variable defined at the beginning of the script, which is set to `/users/GR/mb/jquilez/projects/conseq` (the absolute path to the repository directory in the machine where it was developed). As an example see:
 ```
 head -n 12 scripts/utils/check_sequencing_index_concordance.sh
 ```
@@ -51,6 +51,8 @@ The Didactic dataset includes 7 high-throughput sequencing (HTS) samples (2 RNA-
 The `data` folder contains:
 - FASTQ files with 1,000 and 2x1,000 reads for single and paired end samples, respectively, organised by HTS application and sequencing run date (`data/<data_type>/raw/<sequencing_run_date>`)
 - data processed with core analysis pipelines (e.g. RNA-seq pipeline) (`data/<data_type>/samples`)
+
+For information on how data are structured see below [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation).
 
 ### Metadata
 
