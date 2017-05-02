@@ -3,6 +3,9 @@
 Didactic dataset associated to the manuscript entitled "Managing analysis of high-throughput sequencing data". The manuscript, cover letter, tables, figures (and more) can be found [here](https://drive.google.com/drive/folders/0B-MXr-KyKmm6VndUOXBqaGY5Vkk?usp=sharing).
 
 
+
+<br>
+
 ## Table of Contents
 - [Installation and usage](#installation-and-usage)
 - [Toy sequencing dataset](#toy-sequencing-dataset)
@@ -13,11 +16,15 @@ Didactic dataset associated to the manuscript entitled "Managing analysis of hig
 - [Dependencies](#dependencies)
 
 
+<br>
+
 ## Installation and usage
 
 ...
 
 
+
+<br>
 
 ## Toy sequencing dataset
 
