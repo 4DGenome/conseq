@@ -1,0 +1,55 @@
+RNA-Seq QC report
+-----------------------------------
+
+>>>>>>> Input
+
+    bam file = /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/alignments/star/hg38_mmtv/paired_end/fd_005_02_01_rnaseq.Aligned.sortedByCoord.out.bam
+    gff file = /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38/gencode/gencode.v24.annotation.gtf
+    counting algorithm = proportional
+    protocol = strand-specific-reverse
+
+
+>>>>>>> Reads alignment
+
+    reads aligned (left/right) = 927 / 927
+    read pairs aligned  = 927
+    total alignments = 2,162
+    secondary alignments = 308
+    non-unique alignments = 0
+    aligned to genes  = 1,514
+    ambiguous alignments = 30
+    no feature assigned = 246
+    not aligned = 0
+
+
+>>>>>>> Reads genomic origin
+
+    exonic =  1,514 (86.02%)
+    intronic = 170 (9.66%)
+    intergenic = 76 (4.32%)
+    overlapping exon = 31 (1.76%)
+    rRNA = 0 (0%)
+
+
+>>>>>>> Transcript coverage profile
+
+    5' bias = �
+    3' bias = �
+    5'-3' bias = �
+
+
+>>>>>>> Junction analysis
+
+    reads at junctions = 285
+
+    ACCT : 7.02%
+    AGCT : 5.61%
+    AGGT : 4.21%
+    GCCT : 3.16%
+    TTCT : 3.16%
+    ATCT : 2.81%
+    AGGA : 2.81%
+    TGGT : 2.81%
+    TCCT : 2.46%
+    CCCT : 2.11%
+    AGAT : 2.11%
