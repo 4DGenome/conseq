@@ -3,13 +3,11 @@
 **Pipeline to quantify gene/transcript abundance using RNA-seq data**
 
 
-![Pipelines](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/figures_github_repo.001.png)
-
 <br>
 
 ## Modules
 
-The pipeline is broken down into modules that are run sequentially and that can be run individually.
+The pipeline is broken down into modules that are run sequentially and that can be run individually too.
 
 1. `trim_reads_trimmomatic`: trim sequencing adapters and low-quality ends from the reads using [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 2. `align_star`: align reads to genome with [STAR](https://github.com/alexdobin/STAR)
@@ -18,10 +16,9 @@ The pipeline is broken down into modules that are run sequentially and that can 
 5. `quantification_kallisto`: pseudo-alignment of reads + quantification of read counts per transcript with [Kallisto](http://pachterlab.github.io/kallisto/)
 6. `clean_up`: delete relatively large intermediate files which can be re-generated
 
-The pipeline can be configured to run all steps or just one (see below) considering that:
-- `trim_reads_trimmomatic` needs to be run at least once, either running the full pipeline (`full` mode) or this step alone (`trim_reads_trimmomatic` mode), as it checks that the input FASTQ files do exist and, if so, creates the sample directory
-- `quantification_kallisto` can be run alone provided `trim_reads_trimmomatic` has also been run
-- `quantification_featurecounts` requires that `align_star` has been run
+The diagram below shows the order in which modules are sequentially executed (numbers) and the dependencies between modules (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
+
+![Pipelines](https://github.com/4DGenome/conseq/blob/master/docs/fig_repo_rnaseq-16.04/fig_repo_rnaseq-16.04.001.png)
 
 
 <br>
