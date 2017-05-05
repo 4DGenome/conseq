@@ -3,6 +3,8 @@
 **Pipeline to quantify gene/transcript abundance using RNA-seq data**
 
 
+![Pipelines](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/figures_github_repo.001.png)
+
 <br>
 
 ## Modules
