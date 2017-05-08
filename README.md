@@ -248,16 +248,7 @@ scripts/pipelines
 	- `projects/jquilez/analysis/2017-04-07_analyses_manuscript/data/sra_stat_datasets.csv`
 - [ ] make that metadata is effectively downloaded from Zenodo instead of importing the local file in `scripts/utils/io_metadata.sh`
 - [ ] make that metadata is effectively downloaded from Zenodo instead of importing the local file in `scripts/utils/sample_id_generator.sh`
-- [] add link to BSS17 slides
-- [] add link to bioRxiv pre print
-
-
-
-
-Supplementary Figure 6. Scalability, parallelization and automatic configuration of pipelines.
-Our analysis pipelines include 3 chief files. The configuration file (‘*.config’) contains the list of samples to be processed as well as hard-coded parameters that apply to all samples (e.g. number of computing cores). This is passed to the ‘*submit.sh’ script, which will take the pipeline code (contained in the ‘*seq.sh’ script) and generate as many job scripts as samples and submit them to the computing cluster; if the latter is not possible they can also be executed sequentially. Any sample-specific variable used by the pipeline is extracted from the SQL database storing the samples metadata; in addition, hard-coded parameters as well as metrics are stored in the database.
-
-dd
-
+- [ ] add link to BSS17 slides
+- [ ] add link to bioRxiv pre print
 
 
