@@ -209,7 +209,7 @@ The command above shows the analysis performed for this paper, which is assigned
 
 <br>
 
-## Scalability, parallelization and automatic configuration
+## Scalability, parallelization, automatic configuration and modularity
 
 The diagram below illustrated incorporate scalability, parallelization, automatic configuration and modularity to our core analysis pipelines.
 
