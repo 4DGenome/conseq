@@ -1,6 +1,6 @@
-Apr 28 12:31:36 ..... started STAR run
-Apr 28 12:31:36 ..... loading genome
-Apr 28 12:32:00 ..... started mapping
-Apr 28 12:32:04 ..... started sorting BAM
-Apr 28 12:32:04 ..... started wiggle output
-Apr 28 12:33:03 ..... finished successfully
+May 09 16:13:53 ..... started STAR run
+May 09 16:13:53 ..... loading genome
+May 09 16:14:57 ..... started mapping
+May 09 16:15:03 ..... started sorting BAM
+May 09 16:15:03 ..... started wiggle output
+May 09 16:15:59 ..... finished successfully

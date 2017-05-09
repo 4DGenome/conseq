@@ -74,7 +74,7 @@ main() {
  			quality_control_raw_reads read1
  			quality_control_raw_reads read2
  		elif [[ -n $sample_id && $sequencing_type == 'SE' ]]; then
- 			echo "sample_id=$sample_id sequencing_type=$sequencing_type"
+ 			#echo "sample_id=$sample_id sequencing_type=$sequencing_type"
  			quality_control_raw_reads read1
 		else
 			message_info "-s <sample_id> and/or -p <sequencing_type> are not provided; exiting..."
@@ -89,15 +89,6 @@ main() {
 			exit
 		fi
 	
-	elif [[ $mode == "add_to_metadata" ]]; then
-		if [[ -n $table && -n $sample_id && -n $time_stamp && -n $attribute && -n $value ]]; then
-			python $io_metadata $db 'add_to_metadata' $table $sample_id $time_stamp $attribute $value
-		else
-			message_info "-t <table>, -s <sample_id>, -u <time_stamp> -a <attribute> and or -v <value> are not provided; exiting..."
-			message_info "t=$table s=$sample_id u=$time_stamp a=$attribute v=$value"
-			exit
-		fi
-
 	elif [[ $mode == "print_freeze" ]]; then
 		python $io_metadata $db print_freeze $CONSEQ
 	fi

@@ -1,0 +1,12 @@
+PASS	Basic Statistics	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Per base sequence quality	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Per tile sequence quality	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Per sequence quality scores	fd_005_01_01_rnaseq_read1.fastq.gz
+FAIL	Per base sequence content	fd_005_01_01_rnaseq_read1.fastq.gz
+WARN	Per sequence GC content	fd_005_01_01_rnaseq_read1.fastq.gz
+WARN	Per base N content	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Sequence Length Distribution	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Sequence Duplication Levels	fd_005_01_01_rnaseq_read1.fastq.gz
+WARN	Overrepresented sequences	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Adapter Content	fd_005_01_01_rnaseq_read1.fastq.gz
+PASS	Kmer Content	fd_005_01_01_rnaseq_read1.fastq.gz

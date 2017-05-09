@@ -6,6 +6,21 @@
 **paths are relative to /users/GR/mb/jquilez/projects/conseq**
 
 
+## [2017-05-09] Run FastQC
+----------------------------------------------------------------------------------------------------
+
+```
+# variables
+#samples="gv_066_01_01_chipseq fd_005_01_01_rnaseq fd_005_02_01_rnaseq 66950b082_c478f1d09 ad1a9f5b0_c478f1d09 0f24b004c_95a8cd511 0f24b004c_0e31e17c7"
+#process=quality_control
+#project=jquilez
+#analysis=2017-05-09_run_core_analysis_pipelines
+#submit_to_cluster=no
+#integrate_metadata="yes"
+scripts/utils/quality_control.sh
+```
+
+
 
 ## [2017-05-09] Run RNA-seq pipeline
 ----------------------------------------------------------------------------------------------------

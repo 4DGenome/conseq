@@ -4,6 +4,6 @@
 	"n_processed": 949,
 	"kallisto_version": "0.43.0",
 	"index_version": 10,
-	"start_time": "Fri Apr 28 12:37:07 2017",
+	"start_time": "Tue May  9 16:18:39 2017",
 	"call": "/software/mb/bin/kallisto quant -i /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38/kallisto_index/kallisto_homo_sapiens_hg38_gencode_v24.index -o /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/quantifications/kallisto/hg38_mmtv/paired_end -t 8 -b 100 --bias /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read1.fastq.gz /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read2.fastq.gz"
 }

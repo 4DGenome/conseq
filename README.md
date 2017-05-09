@@ -15,6 +15,7 @@ Didactic dataset associated to the manuscript entitled "Managing the analysis of
 - [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation)
 - [Scalability, parallelization and automatic configuration](#scalability-parallelization-and-automatic-configuration)
 - [Documentation](#documentation)
+- [Interactive web application](#interactive-web-application)
 - [Dependencies](#dependencies)
 
 
@@ -64,30 +65,6 @@ The `metadata` directory contains the metadata for the 7 HTS samples in several 
 - `metadata.xlsx`: metadata as a Microsoft Excel Open XML Format Spreadsheet file
 
 
-<br>
-
-## Sequencing index concordance
-
-```bash
-scripts/utils/check_sequencing_index_concordance.sh gv_066_01_01_chipseq
-```
-Executing the code above checks, for the sample passed as argument (`gv_066_01_01_chipseq in this case), whether the sequencing indexes found in the metadata and in the FASTQ agree. Note that for this sanity check to work:
-1. a specific organisation of the data is required (see [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation))
-2. the sequencing index used in this sample needs to be part of the collected metadata (see [Metadata collection](#metadata-collection))
-3. the sequencing index used in this sample needs to be part of the FASTQ header rows (which is not always provided); for instance:
-```bash
-zcat data/chipseq/raw/2012-11-29/gv_066_01_01_chipseq_read1.fastq.gz |head -n 4
-```
-Outputs:
-```
-@HWI-ST227:231:D1F2LACXX:1:1101:1228:2249 1:N:0:AACT
-GGAGCTTTATTGAGTGTTAGAACAGCTCAGAGGAGATCCACAGTCA
-+
-FFFFHGHHHJJJJJIIIIJJJJJJJJJIJJJJJIIIJJJJJJJIJI
-```
-The first row shows that the sequencing index for this sample is AACT.
-
-
 
 <br>
 
@@ -115,13 +92,6 @@ In addition to `-m get_from_metadata`, the following variables are required to e
 - attribute (`-a`) that is printed out
 
 
-### Update metadata
-
-```
-scripts/utils/io_metadata.sh -m add_to_metadata -s gv_066_01_01_chipseq -t input_metadata -a SAMPLE_NAME
-```
-Similarly, `-m add_to_metadata` updates a specific metadata value.
-
 ### Print freeze
 
 ```
@@ -131,6 +101,30 @@ Prints the content of the SQL metadata database (one `*.csv` file per table) int
 ```
 ls -l metadata/freezes/
 ```
+
+
+<br>
+
+## Sequencing index concordance
+
+```
+scripts/utils/check_sequencing_index_concordance.sh gv_066_01_01_chipseq
+```
+Executing the code above checks, for the sample passed as argument (`gv_066_01_01_chipseq in this case), whether the sequencing indexes found in the metadata and in the FASTQ agree. Note that for this sanity check to work:
+1. a specific organisation of the data is required (see [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation))
+2. the sequencing index used in this sample needs to be part of the collected metadata (see [Metadata collection](#metadata-collection))
+3. the sequencing index used in this sample needs to be part of the FASTQ header rows (which is not always provided); for instance:
+```bash
+zcat data/chipseq/raw/2012-11-29/gv_066_01_01_chipseq_read1.fastq.gz |head -n 4
+```
+Outputs:
+```
+@HWI-ST227:231:D1F2LACXX:1:1101:1228:2249 1:N:0:AACT
+GGAGCTTTATTGAGTGTTAGAACAGCTCAGAGGAGATCCACAGTCA
++
+FFFFHGHHHJJJJJIIIIJJJJJJJJJIJJJJJIIIJJJJJJJIJI
+```
+The first row shows that the sequencing index for this sample is AACT.
 
 
 <br>
@@ -190,22 +184,32 @@ We suggest a structured and hierarchical organisation that reflects the way in w
 ### Raw data
 
 ```
-tree data/*/raw
+tree -C -L 2 data/*/raw
+# -C colors directories and files differently
+# -L 2 only shows 2 levels of the tree for clarity
 ```
 As it can be seen from the output of the command above, FASTQ files (`*fastq.gz`) with the raw sequencing reads are named with the SAMPLE_ID and grouped by the run in which they were generated. Sequencing run directories contain not only the FASTQ files but also [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) reports informing about the quality of the raw reads.
+
 
 ### Processed data
 
 ```
-tree data/*/samples
+tree -C -L 2 data/*/samples
+# -C colors directories and files differently
+# -L 2 only shows 2 levels of the tree for clarity
 ```
+
 
 ### Analysis results
 
 ```
-tree projects
+tree -C projects
 ```
-The command above shows the analysis performed for this paper, which is assigned to the `jquilez` project. The name of the analysis directory (`2017-04-07_analyses_manuscript`) starts with a timestamp plus a descriptive tag, so that additional analyses are naturally sorted chronologically. The analysis directory includes well-defined subdirectories where the output of the analysis is saved (`data`, `figures`, `scripts`, and `tables`). The analysis is thoroughly documented in the [Jupyter](http://jupyter.org/) notebook `2017-04-07_analyses_manuscript.ipynb`.
+The command above shows 2 analyses assigned to the `jquilez` user/project:
+- `2017-04-07_analyses_manuscript`: analyses performed for some statistics and figures presented in the manuscript
+- `2017-05-09_run_core_analysis_pipelines`: run [RNA-seq](https://github.com/4DGenome/conseq/tree/master/scripts/pipelines/rnaseq-16.06) and [ChIP-seq](https://github.com/4DGenome/conseq/tree/master/scripts/pipelines/chipseq-16.04) pipelines on some of the samples of the Didactic dataset
+
+In both cases, the name of the analysis directory (e.g. `2017-04-07_analyses_manuscript`) starts with a timestamp plus a descriptive tag, so that additional analyses are naturally sorted chronologically. The analysis directory includes well-defined subdirectories where the output of the analysis is saved (`data`, `figures`, `scripts`, and `tables`). The analysis is thoroughly documented in [Jupyter Notebook](http://jupyter.org/) (`*.ipynb`) or [Markdown](https://daringfireball.net/projects/markdown/) (`*.md`) files.
 
 
 <br>
@@ -261,6 +265,7 @@ cat $ofasta | grep ">"
 2. Allocate a directory for any task, as shown in:
 ```
 projects/jquilez/analysis/2017-04-07_analyses_manuscript
+projects/jquilez/analysis/2017-05-09_run_core_analysis_pipelines
 ```
 
 3. Code core analysis pipeline to log the output of the programs and verify files integrity. For instance, the following file shows the output of Trimmomatic, which is used to trim the raw reads:
@@ -274,12 +279,22 @@ data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_align
 data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_quantification_featurecounts_paired_end.log
 data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_quantification_kallisto_paired_end.log
 ```
-Contain, respectively, the logs of the alignment (STAR) and quantification (featureCounts and Kallisto) steps of the [RNA-seq pipeline](https://github.com/4DGenome/conseq/tree/master/scripts/pipelines/rnaseq-16.06). Unlike the trimming step, the alignment and quantification steps are sensitive to the version of the genome assembly and, therefore, the logs are saved under the `hg38_mmtv` directory; this allows accomodating data processed for additional assemblies (e.g. hg19).
+contain, respectively, the logs of the alignment (STAR) and quantification (featureCounts and Kallisto) steps of the [RNA-seq pipeline](https://github.com/4DGenome/conseq/tree/master/scripts/pipelines/rnaseq-16.06). Unlike the trimming step, the alignment and quantification steps are sensitive to the version of the genome assembly used and, therefore, the logs are saved under the `hg38_mmtv` directory; this allows accomodating data processed for additional assemblies (e.g. hg19).
 
 
 4. Document procedures using [Markdown](https://daringfireball.net/projects/markdown/), [Jupyter Notebooks](http://jupyter.org/), [RStudio](https://www.rstudio.com/) or alike.
 
-specify non-default variable values 
+5. Specify the non-default variable values that are used. For instance, the file documenting the execution of the RNA-seq pipeline:
+```
+projects/jquilez/analysis/2017-05-09_run_core_analysis_pipelines/09_run_core_analysis_pipelines.md
+```
+contains a copy of the configuration file used to run the RNA-seq pipeline. In this way there is an exact record of the parameter values used in the analysis.
+
+
+<br>
+
+## Interactive web application
+
 
 <br>
 

@@ -1,0 +1,12 @@
+PASS	Basic Statistics	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Per base sequence quality	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Per tile sequence quality	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Per sequence quality scores	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Per base sequence content	gv_066_01_01_chipseq_read1.fastq.gz
+FAIL	Per sequence GC content	gv_066_01_01_chipseq_read1.fastq.gz
+WARN	Per base N content	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Sequence Length Distribution	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Sequence Duplication Levels	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Overrepresented sequences	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Adapter Content	gv_066_01_01_chipseq_read1.fastq.gz
+PASS	Kmer Content	gv_066_01_01_chipseq_read1.fastq.gz

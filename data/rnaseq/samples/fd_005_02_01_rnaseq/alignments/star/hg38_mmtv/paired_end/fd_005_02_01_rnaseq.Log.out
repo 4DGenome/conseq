@@ -342,7 +342,7 @@ twopassMode                       None
 
 
    Input read files for mate 1, from input string /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read1.fastq.gz
--rw-r--r-- 1 jquilez CRG_Lab_Miguel_Beato 43434 Apr 28 12:31 /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read1.fastq.gz
+-rw-r--r-- 1 jquilez CRG_Lab_Miguel_Beato 43434 May  9 16:13 /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read1.fastq.gz
 
    readsCommandsFile:
 exec > "/users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/alignments/star/hg38_mmtv/paired_end/my_tmp/tmp.fifo.read1"
@@ -351,7 +351,7 @@ zcat      "/users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01
 
 
    Input read files for mate 2, from input string /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read2.fastq.gz
--rw-r--r-- 1 jquilez CRG_Lab_Miguel_Beato 44378 Apr 28 12:31 /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read2.fastq.gz
+-rw-r--r-- 1 jquilez CRG_Lab_Miguel_Beato 44378 May  9 16:13 /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read2.fastq.gz
 
    readsCommandsFile:
 exec > "/users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/alignments/star/hg38_mmtv/paired_end/my_tmp/tmp.fifo.read2"
@@ -530,7 +530,7 @@ Number of real (reference) chromosomes= 153
 152	chrUn_KI270757v1	71251	3124756480
 153	mmtv_luciferase	3183	3125018624
 --sjdbOverhang = 50 taken from the generated genome
-Started loading the genome: Fri Apr 28 12:31:36 2017
+Started loading the genome: Tue May  9 16:13:53 2017
 
 checking Genome sizefile size: 3160505932 bytes; state: good=1 eof=0 fail=0 bad=0
 checking SA sizefile size: 24559125256 bytes; state: good=1 eof=0 fail=0 bad=0
@@ -544,7 +544,7 @@ Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 3160505932 byt
 SA file size: 24559125256 bytes; state: good=1 eof=0 fail=0 bad=0
 Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 24559125256 bytes
 Loading SAindex ... done: 1565873619 bytes
-Finished loading the genome: Fri Apr 28 12:31:59 2017
+Finished loading the genome: Tue May  9 16:14:57 2017
 
 Processing splice junctions database sjdbN=348764,   sjdbOverhang=50 
 To accomodate alignIntronMax=1000000 redefined winBinNbits=18
@@ -569,22 +569,22 @@ Created thread # 1
 Created thread # 2
 Created thread # 3
 Created thread # 4
+Created thread # 5
+Created thread # 6
 Starting to map file # 0
 mate 1:   /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read1.fastq.gz
 mate 2:   /users/GR/mb/jquilez/projects/conseq/data/rnaseq/samples/fd_005_02_01_rnaseq/fastqs_processed/trimmomatic/paired_end/fd_005_02_01_rnaseq_read2.fastq.gz
-Created thread # 5
-Created thread # 6
 Created thread # 7
-Thread #1 end of input stream, nextChar=-1
-Completed: thread #2
-Completed: thread #3
-Completed: thread #4
-Completed: thread #5
-Completed: thread #0
-Completed: thread #6
-Completed: thread #7
+Thread #2 end of input stream, nextChar=-1
 Completed: thread #1
+Completed: thread #3
+Completed: thread #5
+Completed: thread #6
+Completed: thread #4
+Completed: thread #0
+Completed: thread #7
 Joined thread # 1
+Completed: thread #2
 Joined thread # 2
 Joined thread # 3
 Joined thread # 4
@@ -597,16 +597,15 @@ Created thread # 1
 Created thread # 2
 Created thread # 3
 Created thread # 4
-Completed: thread #2
 Created thread # 5
-Completed: thread #4
+Completed: thread #1
 Completed: thread #3
 Created thread # 6
+Completed: thread #4
 Completed: thread #5
 Completed: thread #6
 Created thread # 7
 Completed: thread #7
-Completed: thread #0
 BAM sorting: 2162 mapped reads
 BAM sorting bins genomic start loci:
 1	0	149923590
@@ -625,15 +624,16 @@ BAM sorting bins genomic start loci:
 14	20	8212610
 15	20	37223928
 16	24	6976
-Completed: thread #1
+Completed: thread #0
 Joined thread # 1
+Completed: thread #2
 Joined thread # 2
 Joined thread # 3
 Joined thread # 4
 Joined thread # 5
 Joined thread # 6
 Joined thread # 7
-Apr 28 12:32:04 ..... started sorting BAM
+May 09 16:15:03 ..... started sorting BAM
 Max memory needed for sorting = 26538
-Apr 28 12:32:04 ..... started wiggle output
+May 09 16:15:03 ..... started wiggle output
 ALL DONE!

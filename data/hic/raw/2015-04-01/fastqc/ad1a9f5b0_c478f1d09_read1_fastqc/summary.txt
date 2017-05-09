@@ -1,0 +1,12 @@
+PASS	Basic Statistics	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Per base sequence quality	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Per tile sequence quality	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Per sequence quality scores	ad1a9f5b0_c478f1d09_read1.fastq.gz
+FAIL	Per base sequence content	ad1a9f5b0_c478f1d09_read1.fastq.gz
+FAIL	Per sequence GC content	ad1a9f5b0_c478f1d09_read1.fastq.gz
+FAIL	Per base N content	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Sequence Length Distribution	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Sequence Duplication Levels	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Overrepresented sequences	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Adapter Content	ad1a9f5b0_c478f1d09_read1.fastq.gz
+PASS	Kmer Content	ad1a9f5b0_c478f1d09_read1.fastq.gz

@@ -62,13 +62,13 @@ job_name=$pipeline_name-$pipeline_version
 CONSEQ=/users/GR/mb/jquilez/projects/conseq
 
 # python script to write/access metadata
-io_metadata=/users/GR/mb/jquilez/utils/io_metadata.sh
+io_metadata=$CONSEQ/scripts/utils/io_metadata.sh
 
 # get species and assembly version from the metadata
 species=homo_sapiens
 if [[ $integrate_metadata == "yes" ]]; then
 	sequencing_type=`$io_metadata -m get_from_metadata -s $sample_id -t input_metadata -a 'SEQUENCING_TYPE'`
-	read_length=`$io_metadata -m get_from_metadata -s $sample_id -t input_metadata -a 'SEQUENCING_READ_LENGTH'`
+	read_length=`$io_metadata -m get_from_metadata -s $sample_id -t input_metadata -a 'READ_LENGTH'`
 	species=`$io_metadata -m get_from_metadata -s $sample_id -t input_metadata -a 'SPECIES'`	
 	if [[ ${species,,} == 'homo_sapiens' ]]; then
 		version=hg38_mmtv

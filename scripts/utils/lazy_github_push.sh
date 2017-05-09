@@ -12,9 +12,9 @@
 
 # git add
 if [[ -z "$2" ]]; then
-	git add *
+	git add --all *
 else
-	git add $2
+	git add --all $2
 fi
 
 # git commit
