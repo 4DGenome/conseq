@@ -16,9 +16,9 @@ The pipeline is broken down into modules:
 5. `quantification_kallisto`: pseudo-alignment of reads + quantification of read counts per transcript with [Kallisto](http://pachterlab.github.io/kallisto/)
 6. `clean_up`: delete relatively large intermediate files which can be re-generated
 
-The modules can be executed altogether or individually (see [Configuration file](##configuration-file)). The diagram below shows the order in which modules are sequentially executed (numbers), when the full pipeline is run, and the dependencies between modules in case they want to be run individually (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
+The modules can be executed altogether or individually (see [Configuration file](#configuration-file)). The diagram below shows the order in which modules are sequentially executed (numbers), when the full pipeline is run, and the dependencies between modules in case they want to be run individually (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
 
-![rnaseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/rnaseq-16.06/rnaseq-16.06.001.png)
+![rnaseq-16.06](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/rnaseq-16.06/rnaseq-16.06.001.png)
 
 
 <br>
@@ -28,8 +28,8 @@ The modules can be executed altogether or individually (see [Configuration file]
 - `rnaseq.sh`: script with the code of the pipeline
 - `rnaseq_submit`: wrapper script that both:
 	- retrieves configuration variables and parameter values from the `rnaseq.config` file
-	- (if applies) submits jobs (one per sample) to execute the pipeline in an Univa Grid Engine HPC cluster 
-- `rnaseq.config`: configuration file with the list of samples and the hard-coded parameter values (see [Configuration file](##configuration-file))
+	- (if applies) submits jobs (one per sample) to execute the pipeline in a Univa Grid Engine HPC cluster 
+- `rnaseq.config`: configuration file with the list of samples and the hard-coded parameter values (see [Configuration file](#configuration-file))
 
 
 <br>
