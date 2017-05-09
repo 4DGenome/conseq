@@ -132,8 +132,8 @@ if [[ $io_mode == "custom" ]]; then
 	ifq1=$CUSTOM_IN/$ifq1_name
 	ifq2=$CUSTOM_IN/$ifq2_name
 else
-	ifq1=/users/GR/mb/jquilez/data/$data_type/raw/*/${sample_id}*read1.fastq.gz
-	ifq2=/users/GR/mb/jquilez/data/$data_type/raw/*/${sample_id}*read2.fastq.gz
+	ifq1=$CONSEQ/data/$data_type/raw/*/${sample_id}*read1.fastq.gz
+	ifq2=$CONSEQ/data/$data_type/raw/*/${sample_id}*read2.fastq.gz
 fi
 
 # tools
