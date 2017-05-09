@@ -18,7 +18,7 @@ The pipeline is broken down into modules:
 
 The modules can be executed altogether or individually (see [Configuration file](##configuration-file)). The diagram below shows the order in which modules are sequentially executed (numbers), when the full pipeline is run, and the dependencies between modules in case they want to be run individually (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
 
-![rnaseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/rnaseq-16.04/rnaseq-16.04.001.png)
+![rnaseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/rnaseq-16.06/rnaseq-16.06.001.png)
 
 
 <br>
