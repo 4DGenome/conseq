@@ -1,0 +1,40 @@
+INFO  @ Tue, 09 May 2017 11:24:49: 
+# Command line: callpeak -t /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/alignments/bwa/hg38_mmtv/single_end/gv_066_01_01_chipseq_sorted_filtered.bam -q 0.05 --nomodel --extsize 150 --outdir /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/peaks/macs2/hg38_mmtv/sample_alone/single_end --call-summits --gsize hs --name gv_066_01_01_chipseq
+# ARGUMENTS LIST:
+# name = gv_066_01_01_chipseq
+# format = AUTO
+# ChIP-seq file = ['/users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/alignments/bwa/hg38_mmtv/single_end/gv_066_01_01_chipseq_sorted_filtered.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+ 
+INFO  @ Tue, 09 May 2017 11:24:49: #1 read tag files... 
+INFO  @ Tue, 09 May 2017 11:24:49: #1 read treatment tags... 
+INFO  @ Tue, 09 May 2017 11:24:49: Detected format is: BAM 
+INFO  @ Tue, 09 May 2017 11:24:49: * Input file is gzipped. 
+INFO  @ Tue, 09 May 2017 11:24:50: #1 tag size is determined as 45 bps 
+INFO  @ Tue, 09 May 2017 11:24:50: #1 tag size = 45 
+INFO  @ Tue, 09 May 2017 11:24:50: #1  total tags in treatment: 852 
+INFO  @ Tue, 09 May 2017 11:24:50: #1 user defined the maximum tags... 
+INFO  @ Tue, 09 May 2017 11:24:50: #1 filter out redundant tags at the same location and the same strand by allowing at most 1 tag(s) 
+INFO  @ Tue, 09 May 2017 11:24:50: #1  tags after filtering in treatment: 849 
+INFO  @ Tue, 09 May 2017 11:24:50: #1  Redundant rate of treatment: 0.00 
+INFO  @ Tue, 09 May 2017 11:24:50: #1 finished! 
+INFO  @ Tue, 09 May 2017 11:24:50: #2 Build Peak Model... 
+INFO  @ Tue, 09 May 2017 11:24:50: #2 Skipped... 
+INFO  @ Tue, 09 May 2017 11:24:50: #2 Use 150 as fragment length 
+INFO  @ Tue, 09 May 2017 11:24:50: #3 Call peaks... 
+INFO  @ Tue, 09 May 2017 11:24:50: #3 Going to call summits inside each peak ... 
+INFO  @ Tue, 09 May 2017 11:24:50: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Tue, 09 May 2017 11:24:50: #3 Call peaks for each chromosome... 
+INFO  @ Tue, 09 May 2017 11:24:50: #4 Write output xls file... /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/peaks/macs2/hg38_mmtv/sample_alone/single_end/gv_066_01_01_chipseq_peaks.xls 
+INFO  @ Tue, 09 May 2017 11:24:50: #4 Write peak in narrowPeak format file... /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/peaks/macs2/hg38_mmtv/sample_alone/single_end/gv_066_01_01_chipseq_peaks.narrowPeak 
+INFO  @ Tue, 09 May 2017 11:24:50: #4 Write summits bed file... /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/peaks/macs2/hg38_mmtv/sample_alone/single_end/gv_066_01_01_chipseq_summits.bed 
+INFO  @ Tue, 09 May 2017 11:24:50: Done! 

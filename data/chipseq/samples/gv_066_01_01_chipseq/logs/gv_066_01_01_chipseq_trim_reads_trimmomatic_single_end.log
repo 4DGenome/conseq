@@ -1,0 +1,9 @@
+TrimmomaticSE: Started with arguments:
+ /users/GR/mb/jquilez/projects/conseq/data/chipseq/raw/2012-11-29/gv_066_01_01_chipseq_read1.fastq.gz /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/fastqs_processed/trimmomatic/single_end/gv_066_01_01_chipseq_read1.fastq.gz ILLUMINACLIP:/software/mb/el7.2/Trimmomatic-0.36/adapters/TruSeq3-SE.fa:2:30:12:1:true LEADING:3 TRAILING:3 MAXINFO:46:0.999 MINLEN:36
+Automatically using 1 threads
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+ILLUMINACLIP: Using 0 prefix pairs, 2 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Reads: 1000 Surviving: 995 (99.50%) Dropped: 5 (0.50%)
+TrimmomaticSE: Completed successfully

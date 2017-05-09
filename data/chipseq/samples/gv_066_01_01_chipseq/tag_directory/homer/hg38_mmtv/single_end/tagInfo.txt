@@ -1,0 +1,36 @@
+name	Unique Positions	Total Tags
+genome=/users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYMUn.fa	852	852.0
+fragmentLengthEstimate=150		
+peakSizeEstimate=150		
+tagsPerBP=0.000000		
+averageTagsPerPosition=1.000		
+averageTagLength=45.543		
+gsizeEstimate=2993505282		
+averageFragmentGCcontent=0.437		
+chr1	71	71.0
+chr2	42	42.0
+chr3	72	72.0
+chr4	51	51.0
+chr5	54	54.0
+chr6	46	46.0
+chr7	48	48.0
+chr8	60	60.0
+chr9	35	35.0
+chr10	51	51.0
+chr11	41	41.0
+chr12	44	44.0
+chr13	26	26.0
+chr14	30	30.0
+chr15	22	22.0
+chr16	26	26.0
+chr17	30	30.0
+chr18	10	10.0
+chr19	18	18.0
+chr20	24	24.0
+chr21	15	15.0
+chr22	12	12.0
+chrX	21	21.0
+chrY	1	1.0
+chrM	1	1.0
+chrUn_GL000224v1	1	1.0
+cmd=/software/mb/bin/makeTagDirectory /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/tag_directory/homer/hg38_mmtv/single_end /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/alignments/bwa/hg38_mmtv/single_end/gv_066_01_01_chipseq_sorted_filtered.bed -format bed -genome /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYMUn.fa -checkGC		

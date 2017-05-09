@@ -1,0 +1,60 @@
+	Will parse file: /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/alignments/bwa/hg38_mmtv/single_end/gv_066_01_01_chipseq_sorted_filtered.bed
+	Custom genome sequence file: /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYMUn.fa
+
+	Creating directory: /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/tag_directory/homer/hg38_mmtv/single_end and removing existing *.tags.tsv
+
+	Reading alignment file /users/GR/mb/jquilez/projects/conseq/data/chipseq/samples/gv_066_01_01_chipseq/alignments/bwa/hg38_mmtv/single_end/gv_066_01_01_chipseq_sorted_filtered.bed
+
+	Optimizing tag files...
+	Estimated genome size = 2993505282
+	Estimated average read density = 0.000000 per bp
+	Total Tags = 852.0
+	Total Positions = 852
+	Average tag length = 45.5
+	Median tags per position = 1 (ideal: 1)
+	Average tags per position = 1.000
+	Fragment Length Estimate: 0
+		!!! No reliable estimate for fragment length
+		!!! PLEASE SET MANUALLY (currently set to 150, edit tagInfo.txt to change)
+	Peak Width Estimate: 0
+		!!! No reliable estimate for peak size
+		Setting Peak width estimate to be equal to fragment length estimate
+	Autocorrelation quality control metrics:
+		Same strand fold enrichment: 0.0
+		Diff strand fold enrichment: 1.0
+		Same / Diff fold enrichment: 1.0
+
+		Guessing sample is ChIP-Seq - may have low enrichment with lots of background
+
+	Checking GC bias...
+		Current Fragment length estimate: 150
+	Checking Tag/Fragment sequence for bias...
+		chr1
+	Reading whole genome at once...
+		chr2
+		chr3
+		chr4
+		chr5
+		chr6
+		chr7
+		chr8
+		chr9
+		chr10
+		chr11
+		chr12
+		chr13
+		chr14
+		chr15
+		chr16
+		chr17
+		chr18
+		chr19
+		chr20
+		chr21
+		chr22
+		chrX
+		chrY
+		chrM
+		chrUn_GL000224v1
+	Avg Fragment GC% = 43.67%
+	Avg Expected GC% = 40.47%
