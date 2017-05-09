@@ -5,6 +5,8 @@ time_start=$(date +"%s")
 run_date=`date +"%Y-%m-%d-%H-%M"`
 job_name=$pipeline_name-$pipeline_version
 
+CONSEQ=/users/GR/mb/jquilez/projects/conseq
+
 # python script to write/access metadata
 io_metadata=/users/GR/mb/jquilez/utils/io_metadata.sh
 
@@ -37,7 +39,7 @@ SCRIPTS=$PIPELINE/scripts
 if [[ $io_mode == "custom" ]]; then
 	SAMPLE=$CUSTOM_OUT/$sample_id
 else
-	SAMPLE=/users/GR/mb/jquilez/data/$data_type/samples/$sample_id
+	SAMPLE=$CONSEQ/data/$data_type/samples/$sample_id
 fi
 
 # Logs
@@ -89,8 +91,6 @@ makeTagDirectory=`which makeTagDirectory`
 bedtools=`which bedtools`
 perl=`which perl`
 java=`which java`
-bam2wig=`which bam2wig.pl`
-bedGraphToBigWig=`which bedGraphToBigWig`
 python=`which python`
 bedgraph_to_bigwig=`which bedGraphToBigWig`
 

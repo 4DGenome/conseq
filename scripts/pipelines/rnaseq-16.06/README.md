@@ -107,7 +107,7 @@ strand_specific			= 2 				; 0=unstranded, 1=stranded, 2=reversely stranded
 ```
 
 - `samples`: espace-separated list of samples
-- `pipeline_run_mode`: any of the 5 steps described in the **Modules** section or `full` to run all of them sequentially
+- `pipeline_run_mode`: name of any of the 6 modules or `full` to run all of them sequentially
 - `io_mode`:
 	- `standard`: pre-defined in/out directories within the `$CONSEQ` path
 	- `custom`:	in/out directories defined by the user in `CUSTOM_IN` and `CUSTOM_OUT`, and the input FASTQs defined with `read1_fname` and, if paired-end, `read2_fname` (see below)

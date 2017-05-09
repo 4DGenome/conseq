@@ -14,6 +14,8 @@
 # CONFIGURATION VARIABLES AND PATHS
 #==================================================================================================
 
+CONSEQ=/users/GR/mb/jquilez/projects/conseq
+
 # configuration file
 config=$1
 
@@ -39,9 +41,9 @@ else
 fi
 
 # paths
-PIPELINE=/users/GR/mb/jquilez/pipelines/$pipeline_name-$pipeline_version
+PIPELINE=$CONSEQ/scripts/pipelines/$pipeline_name-$pipeline_version
 pipeline_file=$PIPELINE/$pipeline_name.sh
-io_metadata=/users/GR/mb/jquilez/utils/io_metadata.sh
+io_metadata=$CONSEQ/scripts/utils/io_metadata.sh
 
 
 
