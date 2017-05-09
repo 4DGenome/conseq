@@ -222,6 +222,47 @@ Specific details about the pipelines can be found at:
 scripts/pipelines
 ```
 
+
+<br>
+
+## Documentation
+
+Some tips for a comprehensive documentation of the analysis procedures.
+
+1. Write in README files how and when software and accessory files (e.g. genome reference sequence, annotation) are obtained. As an example:
+
+```
+# 2016-01-14: Download hg38 full dataset from UCSC Genome Browser
+# -------------------------------------------------------------------------------------
+
+# Download from UCSC's FTP
+INDIR="//hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/"
+OUTDIR="$HOME/assemblies/homo_sapiens/hg38/ucsc"
+mkdir -p $OUTDIR
+rsync -a -P rsync:$INDIR $OUTDIR
+# Untar and uncompress FASTA files
+FASTA=$OUTDIR/chromFa
+mkdir -p $FASTA
+tar -zxvf $OUTDIR/hg38.chromFa.tar.gz
+mv ./chroms/*.fa $FASTA
+rm -rf ./chroms
+# Concatenate chromosome FASTA files into a single one (only for autosomes plus chrX)
+chroms="chr1 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr20 chr21 chr22 chrX"
+ofasta=$OUTDIR/hg38.fa
+rm -f $ofasta
+for c in $chroms; do
+        cat $FASTA/$c.fa >> $ofasta
+done
+# Check the resulting file
+cat $ofasta | grep ">"
+```
+
+
+allocate a directory for any task (even as simple as sharing files)
+code core analysis pipeline to log the output of the programs and verify files integrity
+document procedures using Markdown, Jupyter Notebooks, RStudio or alike
+specify non-default variable values 
+
 <br>
 
 ## Dependencies
