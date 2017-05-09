@@ -107,7 +107,6 @@ fragment_length_sd		= 30				; for single-end data this is required; for paired-e
 strand_specific			= 2 				; 0=unstranded, 1=stranded, 2=reversely stranded
 ```
 
-- `data_type`: `rnaseq`
 - `samples`: espace-separated list of samples
 - `pipeline_run_mode`: any of the 5 steps described in the **Modules** section or `full` to run all of them sequentially
 - `io_mode`:
