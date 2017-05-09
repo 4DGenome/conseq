@@ -7,7 +7,7 @@
 
 
 
-# [2017-05-09] Run RNA-seq pipeline
+## [2017-05-09] Run RNA-seq pipeline
 ----------------------------------------------------------------------------------------------------
 
 Configuration file used:
@@ -78,7 +78,7 @@ scripts/pipelines/rnaseq-16.06/rnaseq_submit.sh scripts/pipelines/rnaseq-16.06/r
 
 
 
-# [2017-05-09] Run ChIP-seq pipeline
+## [2017-05-09] Run ChIP-seq pipeline
 ----------------------------------------------------------------------------------------------------
 
 Configuration file used:
