@@ -14,6 +14,7 @@ Didactic dataset associated to the manuscript entitled "Managing the analysis of
 - [Sample identifier (ID) scheme](#sample-identifier-(ID)-scheme)
 - [Structured and hierarchical data organisation](#structured-and-hierarchical-data-organisation)
 - [Scalability, parallelization and automatic configuration](#scalability-parallelization-and-automatic-configuration)
+- [Documentation](#documentation)
 - [Dependencies](#dependencies)
 
 
@@ -257,10 +258,27 @@ done
 cat $ofasta | grep ">"
 ```
 
+2. Allocate a directory for any task, as shown in:
+```
+projects/jquilez/analysis/2017-04-07_analyses_manuscript
+```
 
-allocate a directory for any task (even as simple as sharing files)
-code core analysis pipeline to log the output of the programs and verify files integrity
-document procedures using Markdown, Jupyter Notebooks, RStudio or alike
+3. Code core analysis pipeline to log the output of the programs and verify files integrity. For instance, the following file shows the output of Trimmomatic, which is used to trim the raw reads:
+
+```
+data/rnaseq/samples/fd_005_01_01_rnaseq/logs/fd_005_01_01_rnaseq_trim_reads_trimmomatic_paired_end.log
+```
+And:
+```
+data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_align_star_paired_end.log
+data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_quantification_featurecounts_paired_end.log
+data/rnaseq/samples/fd_005_01_01_rnaseq/logs/hg38_mmtv/fd_005_01_01_rnaseq_quantification_kallisto_paired_end.log
+```
+Contain, respectively, the logs of the alignment (STAR) and quantification (featureCounts and Kallisto) steps of the [RNA-seq pipeline](https://github.com/4DGenome/conseq/tree/master/scripts/pipelines/rnaseq-16.06). Unlike the trimming step, the alignment and quantification steps are sensitive to the version of the genome assembly and, therefore, the logs are saved under the `hg38_mmtv` directory; this allows accomodating data processed for additional assemblies (e.g. hg19).
+
+
+4. Document procedures using [Markdown](https://daringfireball.net/projects/markdown/), [Jupyter Notebooks](http://jupyter.org/), [RStudio](https://www.rstudio.com/) or alike.
+
 specify non-default variable values 
 
 <br>
