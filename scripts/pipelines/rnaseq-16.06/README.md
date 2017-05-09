@@ -18,7 +18,7 @@ The pipeline is broken down into modules that are run sequentially and that can 
 
 The diagram below shows the order in which modules are sequentially executed (numbers) and the dependencies between modules (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
 
-![Pipelines](https://github.com/4DGenome/conseq/blob/master/docs/fig_repo_rnaseq-16.04/fig_repo_rnaseq-16.04.png)
+![rnaseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/rnaseq-16.04/rnaseq-16.04.001.png)
 
 
 <br>
