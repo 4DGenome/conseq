@@ -7,7 +7,6 @@
 
 ## Modules
 
-
 The pipeline is broken down into modules:
 
 1. `trim_reads_trimmomatic`: trim sequencing adapters and low-quality ends from the reads using [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
