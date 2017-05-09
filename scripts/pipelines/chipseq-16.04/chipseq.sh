@@ -8,7 +8,7 @@ job_name=$pipeline_name-$pipeline_version
 CONSEQ=/users/GR/mb/jquilez/projects/conseq
 
 # python script to write/access metadata
-io_metadata=/users/GR/mb/jquilez/utils/io_metadata.sh
+io_metadata=$CONSEQ/scripts/utils/io_metadata.sh
 
 # get species and assembly version from the metadata
 species=homo_sapiens
