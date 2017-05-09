@@ -1,3 +1,57 @@
+#!/bin/bash
+#$ -N job_gv_066_01_01_chipseq_2017_05_09_full_macs2_chipseq-16.04
+#$ -q long-sl7
+#$ -l virtual_free=80G
+#$ -l h_rt=48:00:00
+#$ -o /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/chipseq-16.04/job_out/job_gv_066_01_01_chipseq_2017_05_09_full_macs2_chipseq-16.04_$JOB_ID.out
+#$ -e /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/chipseq-16.04/job_out/job_gv_066_01_01_chipseq_2017_05_09_full_macs2_chipseq-16.04_$JOB_ID.err
+#$ -j y
+#$ -M javier.quilez@crg.eu
+#$ -m abe
+#$ -pe smp 10
+
+submitted_on=2017_05_09
+pipeline_version=16.04
+sample_id=gv_066_01_01_chipseq
+data_type=chipseq
+pipeline_name=chipseq
+pipeline_version=16.04
+pipeline_run_mode=full
+io_mode=standard
+CUSTOM_IN=scripts/pipelines/chipseq-16.04/test
+CUSTOM_OUT=scripts/pipelines/chipseq-16.04/test
+sample_to_fastqs=sample_to_fastqs.txt
+submit_to_cluster=no
+queue=long-sl7
+memory=80G
+max_time=48:00:00
+slots=10
+email=javier.quilez@crg.eu
+integrate_metadata=yes
+sequencing_type=
+seedMismatches=2
+palindromeClipThreshold=30
+simpleClipThreshold=12
+leading=3
+trailing=3
+minAdapterLength=1
+keepBothReads=true
+minQual=3
+strictness=0.999
+minLength=36
+read_length=
+species=
+version=
+strand_specific=1
+peak_caller=macs2
+use_control=no
+control_bam=
+macs2_qvalue=0.05
+control_bam=
+CUSTOM_OUT=scripts/pipelines/chipseq-16.04/test
+PIPELINE=/users/GR/mb/jquilez/projects/conseq/scripts/pipelines/chipseq-16.04
+config=scripts/pipelines/chipseq-16.04/chipseq.config
+path_job_file=/users/GR/mb/jquilez/projects/conseq/scripts/pipelines/chipseq-16.04/job_cmd/job_gv_066_01_01_chipseq_2017_05_09_full_macs2_chipseq-16.04.sh
 module load libpng
 
 # additional run variables
@@ -78,8 +132,8 @@ if [[ $io_mode == "custom" ]]; then
 	ifq1=$CUSTOM_IN/$ifq1_name
 	ifq2=$CUSTOM_IN/$ifq2_name
 else
-	ifq1=$CONSEQ/data/$data_type/raw/*/${sample_id}*read1.fastq.gz
-	ifq2=$CONSEQ/data/$data_type/raw/*/${sample_id}*read2.fastq.gz
+	ifq1=/users/GR/mb/jquilez/data/$data_type/raw/*/${sample_id}*read1.fastq.gz
+	ifq2=/users/GR/mb/jquilez/data/$data_type/raw/*/${sample_id}*read2.fastq.gz
 fi
 
 # tools
