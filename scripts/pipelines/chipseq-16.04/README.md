@@ -17,17 +17,17 @@ The pipeline is broken down into modules:
 6. `call_peaks`: call binding site peaks with (a) [MACS2](https://github.com/taoliu/MACS) (either using control or not) or (b) [Zerone](https://github.com/gui11aume/zerone) (control is required)
 7. `clean_up`: delete relatively large intermediate files which can be re-generated
 
-The modules can be executed altogether or individually (see [Configuration file](##configuration-file)). The diagram below shows the order in which modules are sequentially executed (numbers), when the full pipeline is run, and the dependencies between modules in case they want to be run individually (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
+The modules can be executed altogether or individually (see [Configuration file](#configuration-file)). The diagram below shows the order in which modules are sequentially executed (numbers), when the full pipeline is run, and the dependencies between modules in case they want to be run individually (e.g. all modules require that `trim_reads_trimmomatic` has been executed):
 
-![rnaseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/chipseq-16.04/chipseq-16.04.001.png)
+![chipseq-16.04](https://github.com/4DGenome/conseq/blob/master/docs/figures_github_repo/chipseq-16.04/chipseq-16.04.001.png)
 
 ## Scripts
 
-- `chipseq.sh`: most of the code
+- `chipseq.sh`: script with the code of the pipeline
 - `chipseq_submit`: wrapper script that both:
 	- retrieves configuration variables and parameter values from the `chipseq.config` file
-	- (if applies) submits jobs (one per sample) to execute the pipeline in the CRG cluster
-- `chipseq.config`: configuration file (see below)
+	- (if applies) submits jobs (one per sample) to execute the pipeline in a Univa Grid Engine HPC cluster 
+- `chipseq.config`: configuration file with the list of samples and the hard-coded parameter values (see [Configuration file](#configuration-file))
 
 
 ## Execute pipeline
