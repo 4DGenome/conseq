@@ -1,3 +1,5 @@
 ._*
+docs/._*
+docs/.fuse*
 .DS_Store
 projects/jquilez/analysis/2017-04-07_analyses_manuscript/data/sra_result.csv
