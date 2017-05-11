@@ -1,5 +1,4 @@
 # README
----------------------------------------------------------------------------------------------------
 
 **Pipeline to process HiC data**
 
@@ -145,6 +144,11 @@ pis						= 500000				; Dekker/Crane parameter
 pids					= 250000				; Dekker/Crane parameter
 pnt						= 0.1					; Dekker/Crane parameter
 ```
+
+In `pipeline_run_mode`, specifying the name of the module runs that module. Also:
+- `full`: runs all modules sequentially
+- `full_no_clean_up`: intermediate files are not deleted (for testing purposes; note that large files will be left on disk)
+- `full_no_downstream_bam_no_dekker_call`: same as `full` but `downstream_bam` and `dekker_call` modules are not executed (there is no point in doing so for a small number of reads, e.g. 1,000, as it is the case of this didactic dataset)
 
 
 <br>
