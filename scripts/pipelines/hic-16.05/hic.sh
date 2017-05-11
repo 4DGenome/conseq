@@ -192,6 +192,7 @@ main() {
 		reads_filtering
 		post_filtering_statistics
 		map_to_bam
+		clean_up
 	fi
 	echo
 
