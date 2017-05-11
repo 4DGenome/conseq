@@ -1,0 +1,74 @@
+
+INFO 	2016-05-11 14:23:52 	[configuration] 	running hic-16.05 with io_mode=custom, which implies:
+INFO 	2016-05-11 14:23:52 	[configuration] 	integrate_metadata=no (value given in the *.config file is overwritten)
+INFO 	2016-05-11 14:23:52 	[configuration] 	all parameter values are taken from the *.config file and used for all samples
+INFO 	2016-05-11 14:23:52 	[configuration] 	data for test1 will be stored at /users/project/4DGenome/pipelines/hic-16.05/test/test1
+INFO 	2016-05-11 14:23:52 	[configuration] 	paths to input FASTQ files extracted from /users/project/4DGenome/pipelines/hic-16.05/test/sample_to_fastqs.txt
+INFO 	2016-05-11 14:23:52 	[configuration] 	species (homo_sapiens) and assembly version (hg38_mmtv) extracted from the metadata
+
+INFO 	2016-05-11 14:24:22 	[preliminary_checks] 	genome reference FASTA file found at /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYM.fa
+TIME 	2016-05-11 14:25:03 	[preliminary_checks] 	step time for completion (seconds) = 42
+
+INFO 	2016-05-11 14:25:03 	[raw_fastqs_quality_plots] 	restriction enzyme = DpnII
+INFO 	2016-05-11 14:25:03 	[raw_fastqs_quality_plots] 	a subset of 100000 reds will be used to generate the quality plots
+INFO 	2016-05-11 14:25:03 	[raw_fastqs_quality_plots] 	making quality plots of the raw FASTQ files... plots saved at /users/project/4DGenome/pipelines/hic-16.05/test/test1/plots/hg38_mmtv/raw_fastqs_quality_plots
+TIME 	2016-05-11 14:25:09 	[raw_fastqs_quality_plots] 	step time for completion (seconds) = 6
+
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	sequencing type = PE
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	trimming TruSeq3 adapter sequences for HiSeq, NextSeq or HiSeq
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	trimming low-quality reads ends using trimmomatic's recommended practices
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	parse step log to extract generated metadata
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	reads after trimming = 992
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	trimmed reads are in /users/project/4DGenome/pipelines/hic-16.05/test/test1/fastqs_processed/trimmomatic/paired_end
+INFO 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	unpaired reads are deleted
+TIME 	2016-05-11 14:25:09 	[trim_reads_trimmomatic] 	step time for completion (seconds) = 0
+
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	species = homo_sapiens
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	assembly version = hg38_mmtv
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	restriction enzyme = DpnII
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	read length = 50
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	genome reference FASTA file found at /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYM.fa
+INFO 	2016-05-11 14:25:09 	[align_and_merge] 	mapping, processing reads according to restriction enzyme fragments and merging aligments for read1 and read2...
+INFO 	2016-05-11 14:26:51 	[align_and_merge] 	output saved in /users/project/4DGenome/pipelines/hic-16.05/test/test1/logs/hg38_mmtv/test1_align_and_merge_paired_end.log
+TIME 	2016-05-11 14:26:51 	[align_and_merge] 	step time for completion (seconds) = 102
+
+INFO 	2016-05-11 14:26:51 	[post_mapping_statistics] 	generating post mapping descriptive statistics plots...
+INFO 	2016-05-11 14:28:24 	[post_mapping_statistics] 	fraction of reads mapped read1 = 0.964717741935
+INFO 	2016-05-11 14:28:24 	[post_mapping_statistics] 	fraction of reads mapped read2 = 0.910282258065
+INFO 	2016-05-11 14:28:24 	[post_mapping_statistics] 	number of pairs in which both read1 and read2 are mapped = 729
+INFO 	2016-05-11 14:28:24 	[post_mapping_statistics] 	counts-to-distance slope = -0.0402242557806
+TIME 	2016-05-11 14:28:24 	[post_mapping_statistics] 	step time for completion (seconds) = 93
+
+INFO 	2016-05-11 14:28:24 	[reads_filtering] 	filtering reads based on multiple quality parameters...
+INFO 	2016-05-11 14:28:24 	[reads_filtering] 	filtered reads to be used for subsequent analyses are at /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/filtered_reads
+INFO 	2016-05-11 14:28:24 	[reads_filtering] 	excluded reads due to dangling ends are at /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/excluded_reads/dangling_ends
+INFO 	2016-05-11 14:28:24 	[reads_filtering] 	excluded reads due to self circle are at /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/excluded_reads/self_circle
+INFO 	2016-05-11 14:28:24 	[reads_filtering] 	summary of excluded reads at /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/excluded_reads/summary_excluded_per_filter
+TIME 	2016-05-11 14:28:27 	[reads_filtering] 	step time for completion (seconds) = 3
+
+INFO 	2016-05-11 14:28:27 	[post_filtering_statistics] 	generating post filtering descriptive statistics plots... saved at /users/project/4DGenome/pipelines/hic-16.05/test/test1/plots/hg38_mmtv/post_filtering_statistics:
+INFO 	2016-05-11 14:28:27 	[post_filtering_statistics] 	- filtered reads: sequencing coverage along chromosomes, coverage values and interaction matrix
+INFO 	2016-05-11 14:28:27 	[post_filtering_statistics] 	- dangling ends: sequencing coverage along chromosomes and coverage values
+INFO 	2016-05-11 14:28:27 	[post_filtering_statistics] 	- self-circle ends: sequencing coverage along chromosomes and coverage values
+TIME 	2016-05-11 14:29:57 	[post_filtering_statistics] 	step time for completion (seconds) = 90
+
+INFO 	2016-05-11 14:29:57 	[map_to_bam] 	converting MAP to BAM
+TIME 	2016-05-11 14:29:58 	[map_to_bam] 	step time for completion (seconds) = 1
+
+INFO 	2016-05-11 14:29:58 	[downstream_bam] 	perform several downstream analyses
+ls: cannot access /users/project/4DGenome/pipelines/hic-16.05/test/test1/downstream/hg38_mmtv/test1_tads*tsv: No such file or directory
+basename: missing operand
+Try `basename --help' for more information.
+grep: /users/project/4DGenome/pipelines/hic-16.05/test/test1/downstream/hg38_mmtv/test1_tads_*.tsv: No such file or directory
+rm: cannot remove `/users/project/4DGenome/pipelines/hic-16.05/test/test1/downstream/hg38_mmtv/test1_tads_chr*': No such file or directory
+TIME 	2016-05-11 14:30:02 	[downstream_bam] 	step time for completion (seconds) = 4
+
+INFO 	2016-05-11 14:30:02 	[clean_up] 	deleting the following intermediate files/directories:
+INFO 	2016-05-11 14:30:02 	[clean_up] 	/users/project/4DGenome/pipelines/hic-16.05/test/test1/fastqs_processed
+INFO 	2016-05-11 14:30:02 	[clean_up] 	/users/project/4DGenome/pipelines/hic-16.05/test/test1/mapped_reads
+TIME 	2016-05-11 14:30:02 	[clean_up] 	step time for completion (seconds) = 0
+
+
+INFO 	2016-05-11 14:30:02 	[pipeline] 	completed successfully
+TIME 	2016-05-11 14:30:02 	[pipeline] 	total time for completion (seconds) = 370
+

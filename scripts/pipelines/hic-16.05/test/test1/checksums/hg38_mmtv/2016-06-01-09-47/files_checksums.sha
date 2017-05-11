@@ -1,0 +1,6 @@
+19249f1f15a86a534242623c706772d139e62aaf  /users/project/4DGenome/pipelines/hic-16.05/test/test1_read1.fastq
+9966ea85cccb31fcc1787915d5d945d70ec6ef5f  /users/project/4DGenome/pipelines/hic-16.05/test/test1_read2.fastq
+cff9077b44948ed7be700f5c1d9959f6ee390ceb  /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYM.fa
+bc90bab5ede5840f62904c1109398e1ce633f0d4  /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/processed_reads/test1_both_map.tsv
+51ae9d3e570a653e23e6f72a81692afe5b7c2eab  /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/filtered_reads/test1_filtered_map.tsv
+1547fa1060c43976eea7e4762608b8226dca160e  /users/project/4DGenome/pipelines/hic-16.05/test/test1/results/hg38_mmtv/processed_reads/test1_both_map.sam
