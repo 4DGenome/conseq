@@ -1,10 +1,10 @@
 #!/bin/bash
-#$ -N job_66950b082_c478f1d09_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05
+#$ -N job_0f24b004c_0e31e17c7_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05
 #$ -q long-sl7
 #$ -l virtual_free=100G
 #$ -l h_rt=100:00:00
-#$ -o /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_out/job_66950b082_c478f1d09_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05_$JOB_ID.out
-#$ -e /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_out/job_66950b082_c478f1d09_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05_$JOB_ID.err
+#$ -o /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_out/job_0f24b004c_0e31e17c7_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05_$JOB_ID.out
+#$ -e /users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_out/job_0f24b004c_0e31e17c7_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05_$JOB_ID.err
 #$ -j y
 #$ -M javier.quilez@crg.eu
 #$ -m abe
@@ -12,7 +12,7 @@
 
 submitted_on=2017_05_11
 pipeline_version=16.05
-sample_id=66950b082_c478f1d09
+sample_id=0f24b004c_0e31e17c7
 data_type=hic
 pipeline_name=hic
 pipeline_version=16.05
@@ -62,7 +62,7 @@ pnt=0.1
 CUSTOM_OUT=scripts/pipelines/hic-16.05/test
 PIPELINE=/users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05
 config=scripts/pipelines/hic-16.05/hic.config
-path_job_file=/users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_cmd/job_66950b082_c478f1d09_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05.sh
+path_job_file=/users/GR/mb/jquilez/projects/conseq/scripts/pipelines/hic-16.05/job_cmd/job_0f24b004c_0e31e17c7_2017_05_11_full_no_downstream_bam_no_dekker_call_hic-16.05.sh
 
 CONSEQ=/users/GR/mb/jquilez/projects/conseq
 
