@@ -1,0 +1,6 @@
+d715f86e305e09d3b9d1733031a0bed2bb32dade  /users/GR/mb/jquilez/projects/conseq/data/hic/raw/2015-08-01/0f24b004c_95a8cd511_read1.fastq
+2937e9774bd47baa142e91758df173414b4f8393  /users/GR/mb/jquilez/projects/conseq/data/hic/raw/2015-08-01/0f24b004c_95a8cd511_read2.fastq
+cff9077b44948ed7be700f5c1d9959f6ee390ceb  /users/GR/mb/jquilez/assemblies/homo_sapiens/hg38_mmtv/ucsc/hg38_mmtv_chr1-22XYM.fa
+cd6c1880491a2f4fa2ebd495eb83f002333608b5  /users/GR/mb/jquilez/projects/conseq/data/hic/samples/0f24b004c_95a8cd511/results/hg38_mmtv/processed_reads/0f24b004c_95a8cd511_both_map.tsv
+87b9901dd6b63b7118007bf381c257821ca620c1  /users/GR/mb/jquilez/projects/conseq/data/hic/samples/0f24b004c_95a8cd511/results/hg38_mmtv/filtered_reads/0f24b004c_95a8cd511_filtered_map.tsv
+d8eefe865ba60a6e9532b2d70edbcbc45a48282a  /users/project/4DGenome/data/hic/samples/0f24b004c_95a8cd511/results/hg38_mmtv/processed_reads/0f24b004c_95a8cd511_both_map.bam.sam

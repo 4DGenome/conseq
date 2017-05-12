@@ -1,0 +1,11 @@
+exclusion	filter_index	is_applied	reads_fraction	reads_number
+self-circle	1	1	0.0	0
+dangling-end	2	1	0.015584415584415584	12
+error	3	1	0.0025974025974025974	2
+extra_dangling-end	4	1	0.09350649350649351	72
+too_close_from_RES	5	0	0.6506493506493507	501
+too_short	6	0	0.07402597402597402	57
+too_large	7	0	0.0	0
+over-represented	8	0	0.01948051948051948	15
+duplicated	9	1	0.00909090909090909	7
+random_breaks	10	1	0.0012987012987012987	1
